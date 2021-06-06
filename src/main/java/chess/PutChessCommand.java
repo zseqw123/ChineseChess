@@ -5,6 +5,7 @@ import game.ChessBoard;
 
 import java.awt.*;
 
+@SuppressWarnings("SuspiciousNameCombination")
 public class PutChessCommand implements ChessCommand {
 
     private Chess chess;
@@ -30,12 +31,12 @@ public class PutChessCommand implements ChessCommand {
 
     private void moveChess(Chess chess, Point point) {
         this.chess = chess;
-        previousPoint = new Point(chess.getCurrentPoint().x, chess.getCurrentPoint().y);
+        previousPoint = new Point(chess.getCurrentPoint().y, chess.getCurrentPoint().x);
         chess.move(point);
     }
 
     private void removeChess(Chess chess) {
-        removeChessPoint = new Point(chess.getCurrentPoint().x, chess.getCurrentPoint().y);
+        removeChessPoint = new Point(chess.getCurrentPoint().y, chess.getCurrentPoint().x);
         removeChess = chess;
         chess.remove();
     }
