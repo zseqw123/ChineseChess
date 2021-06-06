@@ -1,0 +1,10 @@
+23:08:58.197 [main] INFO  mytest - gameStart
+23:09:03.111 [AWT-EventQueue-0] WARN  mytest - chessjava.awt.Point[x=6,y=0]RED
+23:09:08.301 [AWT-EventQueue-0] WARN  mytest - chessjava.awt.Point[x=2,y=4]RED
+23:09:10.018 [AWT-EventQueue-0] WARN  mytest - chessjava.awt.Point[x=2,y=4]RED
+23:09:16.662 [AWT-EventQueue-0] WARN  mytest - chessjava.awt.Point[x=2,y=0]RED
+23:09:18.596 [AWT-EventQueue-0] WARN  mytest - chessjava.awt.Point[x=2,y=0]RED
+23:09:21.306 [AWT-EventQueue-0] WARN  mytest - chessjava.awt.Point[x=2,y=0]RED
+23:10:54.921 [main] INFO  mytest - gameStart
+23:11:00.657 [AWT-EventQueue-0] WARN  mytest - chessjava.awt.Point[x=2,y=0]RED
+23:11:18.356 [main] INFO  mytest - gameStart
