@@ -19,7 +19,7 @@ public class PutChessCommand implements ChessCommand {
                 .orElseThrow(() -> new IllegalArgumentException("No chess found at the point " + selectPoint));
         Chess nextChess = chessBoard.getChessByPoint(nextPoint).orElse(null);
 
-        if (nextChess != null && nextChess.getColor() != selectChess.getColor()) {
+        if (nextChess != null && nextChess.getColor() == selectChess.getColor()) {
             moveChess(selectChess, nextPoint);
             removeChess(nextChess);
         } else if (nextChess == null) {
