@@ -2,8 +2,10 @@ package chess;
 
 import exception.InvalidMoveException;
 import game.ChessBoard;
+import view.GUI;
 
 import java.awt.*;
+import java.util.logging.Logger;
 
 public abstract class Chess {
 
@@ -25,9 +27,12 @@ public abstract class Chess {
         if (validMove(nextPoint)) {
             this.currentPoint.setLocation(nextPoint);
         } else {
+            GUI.logger.warn("chess" + this.currentPoint + this.chessColor);
             throw new InvalidMoveException("Invalid move in Chess");
         }
     }
+
+
 
     public abstract boolean validMove(Point nextPoint);
 

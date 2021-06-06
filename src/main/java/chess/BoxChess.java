@@ -7,6 +7,8 @@ public abstract class BoxChess extends Chess {
         super(chessColor, point);
     }
 
+
+
     public boolean moveDiagonally(Point nextPoint) {
         int moveX = nextPoint.x - currentPoint.x;
         int moveY = nextPoint.y - currentPoint.y;

@@ -6,6 +6,8 @@ import chess.ChessColor;
 import chess.General;
 import game.ChessBoard;
 import game.StandardChessBoard;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
@@ -33,6 +35,9 @@ public class GUI extends JFrame implements View {
     private ChessListViewModel chessListViewModel;
     private Point selectPoint, nextPoint;
     private Player player;
+    public static Logger logger = LoggerFactory.getLogger("mytest");
+
+
 
     public void launch(Presenter presenter, ChessListViewModel chessListViewModel) {
         this.player = RED_PLAYER;
@@ -203,10 +208,13 @@ public class GUI extends JFrame implements View {
     }
 
     public static void main(String[] args) { //262, 20
+
+        logger.info("gameStart");
         Chess[] chessList = {new General(ChessColor.RED, new Point(4, 0)),
                 new General(ChessColor.BLACK, new Point(4, 9))};
         ChessBoard chessBoard = new StandardChessBoard();
         GUI view = new GUI();
+
         Presenter presenter = new Presenter(chessBoard, view);
         view.launch(presenter, toViewModel(chessBoard.getChessList()));
 //        view.playSounds(Media.ERROR);
